@@ -1,0 +1,23 @@
+<template name="input">
+  <div id="iput" class="well">
+    <label>Your message</label>
+    <textarea rows="3" id="newMessage"></textarea>
+    <input type="text" placeholder="Your name" id="username"/>
+    <a id="send">Send</a>
+  </div>
+</template>
+
+<template name="messages">
+  <div id="message">
+    {{#each messages}}
+      {{>message}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="message">
+  <blockquote>
+    <p>{{message}}</p>
+    <small>{{username}}</small>
+  </blockquote>
+</template>
