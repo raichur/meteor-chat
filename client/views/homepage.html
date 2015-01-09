@@ -1,0 +1,17 @@
+<template name="homepage">
+  <div class="container">
+    <a href="/"><h1>Cht</h1></a>
+    <h2>a simple chat app with Meteor</h2>
+  </div>
+  <div class="landing">
+    <form class="form-inline" role="form">
+      <input type="text" class="form-control" id="channelInput" placeholder="cht" maxlength="20" />
+      <button type="button" id="channelButton">Go</button>
+    </form>
+    <ul class="pager">
+      {{#each channels}}
+      <li><a href="/c/{{name}}">{{name}} ({{participants.length}})</a></li>
+      {{/each}}
+    </ul>
+  </div>
+</template>

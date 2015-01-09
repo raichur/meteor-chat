@@ -1,23 +1,26 @@
-<template name="input">
-  <div id="iput" class="well">
-    <label>Your message</label>
-    <textarea rows="3" id="newMessage"></textarea>
-    <input type="text" placeholder="Your name" id="username"/>
-    <a id="send">Send</a>
+<template name="chat">
+  <div class="chat">
+    <div class="converstation" id="scroll">
+      {{#each messages}}
+          {{#if message}}
+          <div>
+            {{breaklines message}}
+            <i class="author">{{name}}</i>
+          </div>
+          {{/if}}
+          <script type="text/javascript">if(typeof(scrolldown) == "function"){ scrolldown(); }</script>
+      {{/each}}
+    </div>
+    <div class="conversationInput">
+      <input type="text" id="messageInput" placeholder="Message" maxlength="300">
+    </div>
   </div>
-</template>
 
-<template name="messages">
-  <div id="message">
-    {{#each messages}}
-      {{>message}}
-    {{/each}}
-  </div>
-</template>
+<script type="text/javacript">
+  var scrolldown = function(){
+    var elem = $('#scroll');
+    elem.scrollTop = elem.scrollHeight;
+  }
+</script>
 
-<template name="message">
-  <blockquote>
-    <p>{{message}}</p>
-    <small>{{username}}</small>
-  </blockquote>
 </template>

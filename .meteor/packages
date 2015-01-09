@@ -6,13 +6,9 @@
 
 standard-app-packages
 insecure
-accounts-guest
 accounts-base
 accounts-password
-user-status
-accounts-testing
-iron-router
-bootstrap-3
-fast-render
-jquery-titlealert
-related
+iron:router
+artwells:accounts-guest
+bootstrap
+jquery
