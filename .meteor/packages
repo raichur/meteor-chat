@@ -12,3 +12,4 @@ iron:router
 artwells:accounts-guest
 bootstrap
 jquery
+mizzao:user-status

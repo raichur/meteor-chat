@@ -1,6 +1,6 @@
 <template name="participants">
   <h3>Participants</h3>
-  <ul>
+  <ul class="pager">
     {{#each participants}}
       <li><div class="color-swatch" style="background: {{labelClass}};"></div>{{profile.name}}</li>
     {{/each}}
